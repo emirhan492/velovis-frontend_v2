@@ -43,16 +43,15 @@ export default function RegisterPage() {
 
     try {
       // Backend'e kayıt isteği at
-      await api.post('/auth/register', formData);
+      await api.post('auth/register', formData);
 
       // Başarılı olduysa...
-      setSuccess("Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz...");
+      setSuccess("Kayıt başarılı. Lütfen e-postanızı kontrol edin.");
       setFormData(initialFormState); // Formu temizle
 
       // 2 saniye bekle ve kullanıcıyı giriş sayfasına yönlendir
       setTimeout(() => {
-        setSuccess(data.message || 'Kayıt başarılı. Lütfen e-postanızı kontrol edin.');
-       // router.push('/login'); burası aktivasyon olmadan giriş yapıyor
+        router.push('/login');
       }, 2000);
 
     } catch (err: any) {

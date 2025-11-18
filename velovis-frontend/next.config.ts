@@ -13,6 +13,13 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**', // 'via.placeholder.com' adresindeki tüm yollara izin ver
       },
+
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**', // picsum.photos adresindeki tüm yollara izin ver
+      },
       // Gelecekte bir resim sunucun (S3, Cloudinary vb.) olursa,
       // onun bilgilerini de buraya yeni bir obje olarak ekleyeceksin.
     ],
